@@ -639,34 +639,22 @@ nav.links a:focus-visible{
 
   const credCards = document.querySelectorAll('.cred-card');
 
+  function syncCredentialCardHeight(card){
+    const frontFace = card.querySelector('.cred-face.front');
+    const backFace = card.querySelector('.cred-face.back');
+    if(!frontFace || !backFace){
+      return;
+    }
+
+    // Read both sides as-is to avoid toggling classes and causing layout jitter.
+    const frontHeight = frontFace.scrollHeight;
+    const backHeight = backFace.scrollHeight;
+    const targetHeight = Math.max(248, frontHeight, backHeight) + 2;
+    card.style.height = targetHeight + 'px';
+  }
+
   function syncCredentialCardHeights(){
-    credCards.forEach((card)=>{
-      const inner = card.querySelector('.cred-inner');
-      const frontFace = card.querySelector('.cred-face.front');
-      const backFace = card.querySelector('.cred-face.back');
-      if(!inner || !frontFace || !backFace){
-        return;
-      }
-
-      // Measure both faces and size the card to the larger content block.
-      const previousTransition = inner.style.transition;
-      inner.style.transition = 'none';
-
-      const wasFlipped = card.classList.contains('flipped');
-      card.classList.remove('flipped');
-      const frontHeight = frontFace.scrollHeight;
-
-      card.classList.add('flipped');
-      const backHeight = backFace.scrollHeight;
-
-      if(!wasFlipped){
-        card.classList.remove('flipped');
-      }
-
-      const targetHeight = Math.max(248, frontHeight, backHeight) + 2;
-      card.style.height = targetHeight + 'px';
-      inner.style.transition = previousTransition;
-    });
+    credCards.forEach((card)=>syncCredentialCardHeight(card));
   }
 
   credCards.forEach((card)=>{
@@ -682,7 +670,7 @@ nav.links a:focus-visible{
     card.addEventListener('click', ()=>{
       setTimeout(()=>{
         syncCardState();
-        syncCredentialCardHeights();
+        syncCredentialCardHeight(card);
       }, 0);
     });
 
