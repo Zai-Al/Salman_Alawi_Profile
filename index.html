@@ -165,7 +165,7 @@ body.mode-academic .tl-bullets li[data-rel="commercial"]{ opacity:.32; }
 
 .cred-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 @media (max-width:640px){ .cred-grid{ grid-template-columns:1fr; } }
-.cred-card{ perspective:1200px; height:248px; cursor:pointer; transition:opacity .35s var(--ease); }
+.cred-card{ perspective:1200px; min-height:248px; height:auto; cursor:pointer; transition:opacity .35s var(--ease); }
 .cred-inner{ position:relative; width:100%; height:100%; transition:transform .6s var(--ease); transform-style:preserve-3d; }
 .cred-card.flipped .cred-inner{ transform:rotateY(180deg); }
 .cred-face{ position:absolute; inset:0; backface-visibility:hidden; border:1px solid var(--border); border-radius:var(--radius); padding:22px 20px; background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,255,.98)); display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 10px 24px -22px rgba(16,32,51,.32); overflow:hidden; }
@@ -179,8 +179,8 @@ body.mode-academic .tl-bullets li[data-rel="commercial"]{ opacity:.32; }
 .cred-card.flipped .cred-face.back,
 .cred-card[data-flipped="true"] .cred-face.back{ align-items:center; justify-content:center; text-align:center; padding:28px 26px; }
 .cred-card.flipped .cred-face.back .cred-detail,
-.cred-card[data-flipped="true"] .cred-face.back .cred-detail{ max-width:18ch; margin:0 auto; font-size:15px; line-height:1.7; }
-.cred-face.back .cred-detail{ font-size:15px; line-height:1.6; max-width:26ch; }
+.cred-card[data-flipped="true"] .cred-face.back .cred-detail{ max-width:100%; width:100%; margin:0 auto; font-size:15px; line-height:1.7; }
+.cred-face.back .cred-detail{ font-size:15px; line-height:1.6; max-width:100%; width:100%; }
 .cred-tag{ align-self:flex-start; font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; padding:5px 10px; border-radius:999px; color:#fff; background:linear-gradient(90deg, var(--accent-2), var(--accent)); border:1px solid rgba(255,255,255,.35); box-shadow:0 8px 16px -14px rgba(42,99,165,.7); }
 .cred-name{ font-size:14px; font-weight:800; margin-top:0; line-height:1.25; }
 .cred-org{ font-size:12.5px; color:var(--muted); }
@@ -638,6 +638,37 @@ nav.links a:focus-visible{
   const badgeStrip = document.getElementById('badgeStrip');
 
   const credCards = document.querySelectorAll('.cred-card');
+
+  function syncCredentialCardHeights(){
+    credCards.forEach((card)=>{
+      const inner = card.querySelector('.cred-inner');
+      const frontFace = card.querySelector('.cred-face.front');
+      const backFace = card.querySelector('.cred-face.back');
+      if(!inner || !frontFace || !backFace){
+        return;
+      }
+
+      // Measure both faces and size the card to the larger content block.
+      const previousTransition = inner.style.transition;
+      inner.style.transition = 'none';
+
+      const wasFlipped = card.classList.contains('flipped');
+      card.classList.remove('flipped');
+      const frontHeight = frontFace.scrollHeight;
+
+      card.classList.add('flipped');
+      const backHeight = backFace.scrollHeight;
+
+      if(!wasFlipped){
+        card.classList.remove('flipped');
+      }
+
+      const targetHeight = Math.max(248, frontHeight, backHeight) + 2;
+      card.style.height = targetHeight + 'px';
+      inner.style.transition = previousTransition;
+    });
+  }
+
   credCards.forEach((card)=>{
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
@@ -649,7 +680,10 @@ nav.links a:focus-visible{
     };
 
     card.addEventListener('click', ()=>{
-      setTimeout(syncCardState, 0);
+      setTimeout(()=>{
+        syncCardState();
+        syncCredentialCardHeights();
+      }, 0);
     });
 
     card.addEventListener('keydown', (event)=>{
@@ -661,6 +695,9 @@ nav.links a:focus-visible{
 
     syncCardState();
   });
+
+  syncCredentialCardHeights();
+  window.addEventListener('resize', syncCredentialCardHeights);
 
   const copy = {
     commercial: {
