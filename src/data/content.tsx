@@ -52,7 +52,7 @@ export const icons = {
 export const copy: Record<Mode, ModeCopy> = {
   commercial: {
     eyebrow: 'Head of Revenue, Lune',
-    tagline: <>Commercial Growth Leader <span className="div">|</span> Business Development Executive</>,
+    tagline: <>Director-Level Commercial &amp; Growth Strategist <span className="div">|</span> Director-Level Business Development Leader</>,
     trust: <>Trusted by <b>regulators</b>, <b>Tier 1 banks</b>, and <b>fintech disruptors</b> across the GCC</>,
     summary: <>Owns the full revenue function at Lune — direct sales, strategic partnerships, and reseller channels — across Europe and the GCC. Previously scaled Tarabut&apos;s regional business development across Bahrain, KSA, and UAE, and ran a licensed training centre with full curriculum and P&amp;L ownership. Same evidence, read two ways — flip the switch above.</>,
     cta: 'Start a conversation',
