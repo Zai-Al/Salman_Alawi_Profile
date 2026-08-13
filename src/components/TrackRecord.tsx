@@ -32,7 +32,7 @@ export function TrackRecord() {
         ))}
       </div>
       <p className="velocity-caption reveal" ref={captionRef}>
-        Business Development Manager to global Head of Revenue in under three years — built on renewal strategy,
+        Business Development Manager to global Head of Revenue in under three years, built on renewal strategy,
         regional expansion, and Tier 1 banking relationships, not tenure.
       </p>
     </section>

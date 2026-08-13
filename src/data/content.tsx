@@ -54,10 +54,10 @@ export const copy: Record<Mode, ModeCopy> = {
     eyebrow: 'Head of Revenue, Lune',
     tagline: <>Director-Level Commercial &amp; Growth Strategist <span className="div">|</span> Director-Level Business Development Leader</>,
     trust: <>Trusted by <b>regulators</b>, <b>Tier 1 banks</b>, and <b>fintech disruptors</b> across the GCC</>,
-    summary: <>Owns the full revenue function at Lune — direct sales, strategic partnerships, and reseller channels — across Europe and the GCC. Previously scaled Tarabut&apos;s regional business development across Bahrain, KSA, and UAE, and ran a licensed training centre with full curriculum and P&amp;L ownership. Same evidence, read two ways — flip the switch above.</>,
+    summary: <>Owns the full revenue function at Lune (direct sales, strategic partnerships, and reseller channels) across Europe and the GCC. Previously scaled Tarabut&apos;s regional business development across Bahrain, KSA, and UAE, and ran a licensed training centre with full curriculum and P&amp;L ownership. Same evidence, read two ways: flip the switch above.</>,
     cta: 'Start a conversation',
     sting: 'Same ten years. Same result.',
-    mission: 'Lune turns raw transaction data into personalised offers and insight for banks, merchants, and consumers. I lead go-to-market across Europe and the GCC — the commercial engine behind that pipeline.',
+    mission: 'Lune turns raw transaction data into personalised offers and insight for banks, merchants, and consumers. I lead go-to-market across Europe and the GCC, the commercial engine behind that pipeline.',
     tagLine: <><b>Fintech</b> • <b>Banking</b> • <b>Partnerships</b> • <b>GTM Execution</b></>,
     badges: [
       { icon: icons.star, num: '10+', label: 'Years Experience' },
@@ -67,10 +67,10 @@ export const copy: Record<Mode, ModeCopy> = {
     ],
   },
   academic: {
-    eyebrow: 'Lecturer Candidate — Business & Financial Services',
+    eyebrow: 'Lecturer Candidate, Business & Financial Services',
     tagline: <>Business &amp; Commercial Leadership <span className="div">|</span> Financial Services Lecturer</>,
     trust: <>Ofqual-regulated in <b>Education Studies</b> · Certified peer reviewer for <b>3 international journals</b></>,
-    summary: 'Holds an MBA (Merit, Strathclyde) alongside a TQUK Level 4 Diploma in Education Studies and a TQUK Level 4 Award in Internal Quality Assurance of Assessment — earned while running a licensed training centre\'s full curriculum, delivering a national workforce-readiness programme, and building a 30-person training team. The commercial track is the syllabus, not a separate resume.',
+    summary: 'Holds an MBA (Merit, Strathclyde) alongside a TQUK Level 4 Diploma in Education Studies and a TQUK Level 4 Award in Internal Quality Assurance of Assessment, earned while running a licensed training centre\'s full curriculum, delivering a national workforce-readiness programme, and building a 30-person training team. The commercial track is the syllabus, not a separate resume.',
     cta: 'Discuss a teaching opportunity',
     sting: 'Same ten years. Same result.',
     mission: 'Alongside commercial leadership, I bring Ofqual-regulated teaching and assessment credentials, plus five years running a licensed training centre\'s curriculum end-to-end.',
@@ -106,7 +106,7 @@ export interface Metric {
 }
 
 export const metrics: Metric[] = [
-  { icon: icons.globe, target: 5, suffix: ' markets', label: 'GCC markets scaled — Bahrain, UAE, KSA, Oman, Qatar' },
+  { icon: icons.globe, target: 5, suffix: ' markets', label: 'GCC markets scaled: Bahrain, UAE, KSA, Oman, Qatar' },
   { icon: icons.trendingUp, target: 5, prefix: '$', suffix: 'M+', label: 'Pipeline growth contributed' },
   { icon: icons.repeat, target: 300, suffix: '%', label: 'Uplift in Tier 1 contract renewals' },
   { icon: icons.percent, target: 41, suffix: '%', label: 'ROI on marketing spend, Millennium Training Centre' },
@@ -126,22 +126,27 @@ export interface TimelineItem {
 export const timeline: TimelineItem[] = [
   {
     role: 'Head of Revenue',
-    org: 'Lune — Transaction Data Enrichment Platform',
+    org: 'Lune: Transaction Data Enrichment Platform',
     meta: '05/2026 – Present · Global',
     bullets: [
-      { rel: 'commercial', text: 'Owns the global revenue function end-to-end — direct sales, strategic partnerships, and reseller agreements — across all product lines.' },
-      { rel: 'commercial', text: 'Leading a France-first European expansion strategy with Tier 1 banking groups, neobanks, and merchant acquirers.' },
-      { rel: 'academic', text: 'Designed a multi-track commercial playbook that translates complex technical products into plain-language value propositions for distinct buyer audiences.' },
+      { rel: 'commercial', text: <>Serves as the most senior commercial executive at Lune, reporting directly to the CEO and co-founders, with full strategic ownership of the company&apos;s revenue P&amp;L across all product lines.</> },
+      { rel: 'academic', text: <>Built and leads the organisation&apos;s entire commercial and business development function (direct sales, strategic partnerships, and reseller channels), establishing the operating rhythm, structure, and playbook the company runs on today.</> },
+      { rel: 'commercial', text: 'Drives revenue growth across every product line, including the transaction enrichment API and card-linked offers/cashback programmes, translating company strategy into coordinated go-to-market execution.' },
+      { rel: 'commercial', text: 'Leading global expansion across Europe, Asia, and Africa, opening new markets and securing executive-level engagement with Tier 1 banking groups, neobanks, and merchant acquirers.' },
+      { rel: 'commercial', text: 'Owns customer continuity and retention as a core mandate, safeguarding and growing the existing client base alongside new-market acquisition.' },
+      { rel: 'commercial', text: 'Acts as a strategic partner to the CEO and co-founders on company direction, shaping product-market priorities and expansion decisions from a revenue and commercial-risk perspective.' },
     ],
   },
   {
-    role: 'Regional Director, Business Development',
+    role: 'Regional Director of Business Development',
     org: 'Tarabut',
     meta: '03/2025 – 05/2026 · MENA',
     bullets: [
-      { rel: 'commercial', text: 'Directed multi-country sales operations across Bahrain, KSA, and UAE spanning banking, insurance, and lending — double-digit growth in under 18 months.' },
-      { rel: 'commercial', text: 'Closed complex, multi-market commercial agreements with regulators and Tier 1 banks.' },
-      { rel: 'academic', text: 'Built and coached cross-border commercial teams, embedding unified CRM practice and forecasting discipline.' },
+      { rel: 'commercial', text: 'Generated over $7M in closed, booked revenue across three years at Tarabut, a career-defining result for an early-stage startup, achieved through progressive promotion from Business Development Manager to Regional Director.' },
+      { rel: 'commercial', text: <>Operated as the senior commercial leader for the MENA region, directing multi-country sales strategy, team performance, and market execution across Bahrain, KSA, and UAE, effectively running the region&apos;s commercial function end-to-end.</> },
+      { rel: 'commercial', text: 'Closed high-impact, multi-market commercial deals with Tier 1 banks and fintechs, leading complex contract negotiations and cross-border deal structuring from first conversation to signature.' },
+      { rel: 'academic', text: 'Built and led high-performing commercial teams across MENA, implementing unified CRM discipline (HubSpot, Zoho) that brought forecasting rigor and pipeline visibility to a fast-scaling startup environment.' },
+      { rel: 'commercial', text: <>Forged strategic alliances with regulators and ecosystem partners, strengthening Tarabut&apos;s compliance posture and market credibility as it scaled.</> },
     ],
   },
   {
@@ -166,8 +171,8 @@ export const timeline: TimelineItem[] = [
     org: 'Millennium Training Centre',
     meta: '02/2018 – 04/2023 · Manama, Bahrain',
     bullets: [
-      { rel: 'commercial', text: <>Led organisational strategy and multi-product training delivery with full P&amp;L and curriculum ownership — 10%+ YoY growth for five consecutive years.</> },
-      { rel: 'academic', text: 'Designed and delivered a national workforce-readiness programme — the Job Seekers Induction Programme — training and placing 250+ job seekers in its first year, working directly with government stakeholders on curriculum and outcomes reporting.' },
+      { rel: 'commercial', text: <>Led organisational strategy and multi-product training delivery with full P&amp;L and curriculum ownership, delivering 10%+ YoY growth for five consecutive years.</> },
+      { rel: 'academic', text: 'Designed and delivered a national workforce-readiness programme, the Job Seekers Induction Programme, training and placing 250+ job seekers in its first year, working directly with government stakeholders on curriculum and outcomes reporting.' },
       { rel: 'academic', text: 'Built and led a team of 30+ trainers and support staff, embedding a quality-assured, performance-driven instructional culture.' },
     ],
   },
@@ -203,7 +208,7 @@ export const credentials: Credential[] = [
     tag: 'BSc',
     name: 'Bachelor of Science in Nursing',
     org: 'University of Bahrain · 2007–2013',
-    detail: 'The original professional foundation, College of Health Sciences — before a deliberate pivot into commercial and business leadership.',
+    detail: 'The original professional foundation, College of Health Sciences, before a deliberate pivot into commercial and business leadership.',
   },
   {
     rel: 'academic',
@@ -215,16 +220,16 @@ export const credentials: Credential[] = [
   {
     rel: 'academic',
     tag: 'Ofqual · L4',
-    name: 'Award — Internal Quality Assurance of Assessment',
+    name: 'Award: Internal Quality Assurance of Assessment',
     org: 'TQUK / Educating UK · Apr 2022',
     detail: 'Covers internally assuring the quality of assessment, and the principles and practice behind it.',
   },
   {
     rel: 'both',
     tag: 'Practitioner',
-    name: 'PCQI — Chartered Quality Institute',
+    name: 'PCQI: Chartered Quality Institute',
     org: 'CQI & IRCA · Aug 2021',
-    detail: 'Awarded the Practitioner grade with the right to use the honours PCQI — quality and auditing discipline underpinning both training-centre and Lune process work.',
+    detail: 'Awarded the Practitioner grade with the right to use the honours PCQI, a quality and auditing discipline underpinning both training-centre and Lune process work.',
   },
   {
     rel: 'commercial',
@@ -273,30 +278,30 @@ export const projects: Project[] = [
   {
     rel: 'both',
     tag: 'Quality & Operations',
-    name: 'MTC Quality Management System — Review, Improve & Update',
+    name: 'MTC Quality Management System: Review, Improve & Update',
     meta: 'Millennium Training Centre · Jan 2021 – Present',
     desc: "Ongoing ownership of the centre's quality-assurance framework: revising the QA manual and strategic plan, designing new support and operational policies, reviewing every training programme's structure, and running self-evaluation and assessment-procedure reviews.",
   },
   {
     rel: 'both',
     tag: 'Training & Recruitment',
-    name: 'Job Seekers Induction Programme — Training & Recruitment',
+    name: 'Job Seekers Induction Programme: Training & Recruitment',
     meta: 'Millennium Training Centre · Oct 2018 – Present',
-    desc: 'A national employability programme building interpersonal, ICT, and workplace-readiness skills. 76 job seekers trained and placed since inception into roles spanning marketing, HR, admin, accounting, and audit, with the curriculum customised for specific hiring briefs — including bespoke induction tracks for security guards, secretaries, and administrative executives.',
+    desc: 'A national employability programme building interpersonal, ICT, and workplace-readiness skills. 76 job seekers trained and placed since inception into roles spanning marketing, HR, admin, accounting, and audit, with the curriculum customised for specific hiring briefs, including bespoke induction tracks for security guards, secretaries, and administrative executives.',
   },
   {
     rel: 'academic',
     tag: 'MBA Dissertation',
     name: "Evaluating the Impact of Digital Transformation in Bahrain's Education Sector",
     meta: 'Strathclyde Business School · Mar 2020 – Sep 2020',
-    desc: 'Qualitative research study — 26 semi-structured interviews with education-sector professionals, analysed via reflexive thematic analysis, conducted entirely online through the COVID-19 period. Identified five themes shaping ed-tech adoption in Bahrain: barriers to transformation, strategic planning, educational-technology leadership, learner-experience indicators, and digital culture — the last emerging as the strongest single barrier.',
+    desc: 'Qualitative research study based on 26 semi-structured interviews with education-sector professionals, analysed via reflexive thematic analysis, conducted entirely online through the COVID-19 period. Identified five themes shaping ed-tech adoption in Bahrain: barriers to transformation, strategic planning, educational-technology leadership, learner-experience indicators, and digital culture, with the last emerging as the strongest single barrier.',
   },
   {
     rel: 'commercial',
     tag: 'Business Launch',
-    name: 'Medical Training Programmes — New Business Line Launch',
+    name: 'Medical Training Programmes: New Business Line Launch',
     meta: 'Procloud Training Centre · Sep 2016 – Apr 2017',
-    desc: 'Designed and executed the go-to-market plan for a new medical-training business line — securing affiliations with medical awarding bodies, certifying instructors against the target qualifications, scheduling the annual training calendar, and building the sales and marketing plan to reach medical institutions across Bahrain.',
+    desc: 'Designed and executed the go-to-market plan for a new medical-training business line, securing affiliations with medical awarding bodies, certifying instructors against the target qualifications, scheduling the annual training calendar, and building the sales and marketing plan to reach medical institutions across Bahrain.',
   },
 ]
 

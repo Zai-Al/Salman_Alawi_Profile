@@ -36,7 +36,7 @@ export function PeerReview() {
     <section id="peer-review">
       <div className="section-head reveal" ref={headRef}>
         <div className="section-kicker">Academic Service</div>
-        <h2 className="section-title">Certified Peer Reviewer — 3 International Journals</h2>
+        <h2 className="section-title">Certified Peer Reviewer: 3 International Journals</h2>
       </div>
       <div className="pr-block reveal" ref={blockRef}>
         <div className="pr-total">
